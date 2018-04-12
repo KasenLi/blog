@@ -88,4 +88,14 @@ Route::get('admin/auth/logout', [
     'as'    => 'admin.auth.logout'
 ]);
 
+Route::get('admin/auth/register',[
+	'uses'	=>	'Auth\RegisterController@showRegisterForm',
+	'as'	=>	'admin.auth.register'
+]);
+
+Route::post('admin/auth/register', [
+	'uses'	=>	'Auth\RegisterController@register',
+	'as'	=>	'admin.auth.register'
+]);
+
 Route::get('/home', 'HomeController@index')->name('home');

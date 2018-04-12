@@ -26,6 +26,9 @@
       <li class="nav-item active">
         <a href="/admin/auth/login" class="nav-link">Entrar</a>
       </li>
+      <li class="nav-item active">
+        <a href="/admin/auth/register" class="nav-link">Registrar</a>
+      </li>
       @endif
       @if(Auth::user())
       <li class="nav-item dropdown">

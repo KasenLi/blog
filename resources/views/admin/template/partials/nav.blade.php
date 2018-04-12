@@ -52,6 +52,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="{{ route('admin.auth.login') }}">Entrar</a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="{{ route('admin.auth.register') }}">Registrar</a>
+      </li>
     </ul>
     @endif
   </div>
