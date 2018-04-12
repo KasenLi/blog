@@ -54,7 +54,7 @@ class ArticlesController extends Controller
         {
             $file = $request->file('image');
             $name = 'blogk_' . time() . '.' . $file->getClientOriginalExtension();
-            $path = public_path() . '\images\articles';
+            $path = public_path() . '/images/articles';
             $file->move($path, $name);
         }
         
