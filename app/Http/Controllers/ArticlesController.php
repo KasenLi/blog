@@ -138,9 +138,8 @@ class ArticlesController extends Controller
         $article = Article::find($id);
         if(Auth::user()->type == "admin" || $article->user == Auth::user() ){
             $name = Image::where('article_id', $id)->value('name');
-            unlink(public_path() . "images\articles\$name");
+            unlink(public_path('images/articles/$name'));
 
-        
             $article->delete();
 
             Flash::error('Se ha borrado el artículo ' . $article->title . ' de forma exitosa')->important();
