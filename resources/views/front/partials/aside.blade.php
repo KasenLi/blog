@@ -1,7 +1,7 @@
 <div class="card border-secondary badge-light">
 	<div class="card bg-primary text-white">
 		<div class="card-header">
-			<h3 class="card-title">Categorías</h3>
+			<h3 class="card-title">{{ trans('app.title_categories') }}</h3>
 		</div>
 		<div class="card-body">
 			<ul class="list-group">

@@ -10,28 +10,29 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::middleware(['cors'])->group(function(){
+	Route::get('/',[
+		'as' => 'front.index',
+		'uses' => 'FrontController@index' 
+	]);
 
-Route::get('/',[
-	'as' => 'front.index',
-	'uses' => 'FrontController@index' 
-]);
+	Route::get('categories/{name}',[
+		'uses'	=> 'FrontController@searchCategory',
+		'as'	=> 'front.search.category'
+	]);
 
-Route::get('categories/{name}',[
-	'uses'	=> 'FrontController@searchCategory',
-	'as'	=> 'front.search.category'
-]);
+	Route::get('tags/{name}',[
+		'uses'	=> 'FrontController@searchTag',
+		'as'	=> 'front.search.tag'
+	]);
 
-Route::get('tags/{name}',[
-	'uses'	=> 'FrontController@searchTag',
-	'as'	=> 'front.search.tag'
-]);
+	Route::get('articles/{slug}',[
+		'uses'	=> 'FrontController@viewArticle',
+		'as'	=> 'front.view.article'
+	]);
+});
 
-Route::get('articles/{slug}',[
-	'uses'	=> 'FrontController@viewArticle',
-	'as'	=> 'front.view.article'
-]);
-
-Route::group(['prefix' => 'admin', 'middleware' => 'auth' ], function(){
+Route::group(['prefix' => 'admin', 'middleware' => ['auth','cors'] ], function(){
 
 	Route::get('/',[
 		'uses' 	=> 'MainController@index',

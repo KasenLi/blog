@@ -2,7 +2,7 @@
 
 @section('content')
 	
-	<h3 class="title-front left" style="">Últimos Artículos</h3>
+	<h3 class="title-front left" style="">{{ trans('app.title_last_articles')}}</h3>
 	<div class="row">
 		<div class="col-md-8">
 			<div class="row">
