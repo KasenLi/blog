@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 	<title>Acceso restringido</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('plugins/bootstrap/css/bootstrap.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/error.css')}}">
