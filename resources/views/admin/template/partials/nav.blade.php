@@ -32,7 +32,7 @@
     </ul>
     <ul class="nav navbar-nav navbar-right">
       <li class="nav-item">
-        <a href="{{route('front.index')}}" class="nav-link active" target="_blank">{{trans('app.navbar_main_page')}}</a>
+        <a href="{{route('front.index')}}" class="nav-link active">{{trans('app.navbar_main_page')}}</a>
       </li>
       <li class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="navbarDropdown">{{ Auth::user()->name }} <span class="caret"></span></a>

@@ -34,7 +34,7 @@
       <li class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="navbarDropdown">{{ Auth::user()->name }} <span class="caret"></span></a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a href="{{ route('admin.welcome.index')}}" class="dropdown-item" target="_blank">Administrar</a>
+          <a href="{{ route('admin.welcome.index')}}" class="dropdown-item">Administrar</a>
           <a href="{{ route('admin.auth.logout')}}" class="dropdown-item">Salir</a>
         </div>
       </li>

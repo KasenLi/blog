@@ -30,6 +30,7 @@ Route::middleware(['cors'])->group(function(){
 		'uses'	=> 'FrontController@viewArticle',
 		'as'	=> 'front.view.article'
 	]);
+
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth','cors'] ], function(){
@@ -74,29 +75,32 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','cors'] ], function()
 /*
 Auth::routes();
 */
-Route::get('admin/auth/login', [
-    'uses'  => 'Auth\LoginController@showLoginForm',
-    'as'    => 'admin.auth.login'
-]);
+Route::middleware(['cors'])->group(function(){
+	Route::get('admin/auth/login', [
+	    'uses'  => 'Auth\LoginController@showLoginForm',
+	    'as'    => 'admin.auth.login'
+	]);
 
-Route::post('admin/auth/login', [
-    'uses'  => 'Auth\LoginController@login',
-    'as'    => 'admin.auth.login'
-]);
+	Route::post('admin/auth/login', [
+	    'uses'  => 'Auth\LoginController@login',
+	    'as'    => 'admin.auth.login'
+	]);
 
-Route::get('admin/auth/logout', [
-    'uses'  => 'Auth\LoginController@logout',
-    'as'    => 'admin.auth.logout'
-]);
+	Route::get('admin/auth/logout', [
+	    'uses'  => 'Auth\LoginController@logout',
+	    'as'    => 'admin.auth.logout'
+	]);
 
-Route::get('admin/auth/register',[
-	'uses'	=>	'Auth\RegisterController@showRegisterForm',
-	'as'	=>	'admin.auth.register'
-]);
+	Route::get('admin/auth/register',[
+		'uses'	=>	'Auth\RegisterController@showRegisterForm',
+		'as'	=>	'admin.auth.register'
+	]);
 
-Route::post('admin/auth/register', [
-	'uses'	=>	'Auth\RegisterController@register',
-	'as'	=>	'admin.auth.register'
-]);
+	Route::post('admin/auth/register', [
+		'uses'	=>	'Auth\RegisterController@register',
+		'as'	=>	'admin.auth.register'
+	]);
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+//Route::get('/home', 'HomeController@index')->name('home');
