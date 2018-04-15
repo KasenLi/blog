@@ -42,7 +42,7 @@
 	$('.select-category').chosen({
 		width: "100%"
 	});
-
+	$.trumbowyg.svgPath = '/plugins/trumbowyg/ui/icons.svg';
 	$('.textarea-content').trumbowyg();
 
 	$('.input-image').fileinput({
