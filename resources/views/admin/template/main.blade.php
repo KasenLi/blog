@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
 	<title>@yield('title', 'Default') | Panel de Administración</title>
 	<link rel="stylesheet" href="{{ asset('plugins/bootstrap/css/bootstrap.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/general.css') }}">
